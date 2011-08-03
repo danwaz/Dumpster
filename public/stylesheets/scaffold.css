@@ -4,6 +4,7 @@ body, p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size:   13px;
   line-height: 18px;
+  margin: 0;
 }
 
 pre {
@@ -18,6 +19,25 @@ a:hover { color: #fff; background-color:#000; }
 
 div.field, div.actions {
   margin-bottom: 10px;
+}
+
+#header{
+	
+	background-color: #000000;
+	height: 40px;
+	width: 100%;
+	
+}
+
+#title {
+	padding-top: 10px;
+	padding-left: 5px;
+	font-size: 26px;
+	color: #FFFFFF;
+}
+
+#fullsite{
+	
 }
 
 #notice {

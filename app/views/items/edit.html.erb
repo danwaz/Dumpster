@@ -1,4 +1,7 @@
-<h1>Editing item</h1>
+<%= render 'header' %>
+<h1>Edit</h1>
+
+<%= image_tag @item.image.url(:thumb) %>
 
 <%= render 'form' %>
 

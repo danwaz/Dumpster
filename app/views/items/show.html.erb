@@ -1,19 +1,17 @@
+<%= render 'header' %>
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Header:</b>
-  <%= @item.header %>
+  <h1><%= @item.header %></h1>
 </p>
 
 <%= image_tag @item.image.url(:medium) %>
 
 <p>
-  <b>Dim:</b>
-  <%= @item.dim %>
+  <h5><%= @item.dim %></h5>
 </p>
 
 <p>
-  <b>Desc:</b>
   <%= @item.desc %>
 </p>
 
