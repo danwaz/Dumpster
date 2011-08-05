@@ -7,4 +7,7 @@ class Item < ActiveRecord::Base
   
   validates :header, :desc, :dim, :presence => true
   
+  validates_format_of :header, :with => /\A[a-zA-Z]+\z/,
+    :message => "Only letters allowed"
+  
 end

@@ -80,4 +80,22 @@ class ItemsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  def search
+
+      @item = Item.find(params[:item_search][:id])
+      
+      unless @item.nil?
+        
+        redirect_to @item
+        
+        #respond_to do |format|
+        #  format.html # show.html.erb
+        #  format.xml  { render :xml => @item }
+        #end
+      else
+        #not found
+      end
+
+  end
 end

@@ -1,6 +1,8 @@
 <h1>Pages#search</h1>
 <p>Find me in app/views/pages/search.html.erb</p>
 
+<% form_for(:item_search, :url => '/items/search') do |f| %>
+<%= f.text_field :id %>
+<%= submit_tag "Search "%>
 
-
-<%= link_to 'confirm', item_path(10) %>
+<% end %>

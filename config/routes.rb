@@ -4,6 +4,9 @@ Dumpster::Application.routes.draw do
 
   match '/search', :to => 'pages#search'
   match '/home' , :to => 'pages#home'
+
+  match "/items/search" => "items#search"
+  
   resources :items
 
   # The priority is based upon order of creation:
