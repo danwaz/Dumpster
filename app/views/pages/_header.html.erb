@@ -1,9 +1,11 @@
 <div id="header">
 	<div id="title">HEADER</div>
 	<div id="fullsite">
-		<a href="#">
-			Full Site
-		</a>
+			<% if user_signed_in? %>
+			<%= link_to 'Logout', logout_path %>
+			<% else %>
+			<%= link_to 'Login', login_path%>
+			<% end %>
 	</div>
 </div>
 
