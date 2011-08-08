@@ -17,9 +17,15 @@
     <td><%= item.header %></td>
     <td><%= item.dim %></td>
     <td><%= item.desc %></td>
+     <% if can? :read, Item %>
     <td><%= link_to 'Show', item %></td>
+    <% end %>
+    <% if can? :update, Item %>
     <td><%= link_to 'Edit', edit_item_path(item) %></td>
+    <% end %>
+    <% if can? :destroy, Item %>
     <td><%= link_to 'Destroy', item, :confirm => 'Are you sure?', :method => :delete %></td>
+    <% end %>
   </tr>
 <% end %>
 </table>
