@@ -94,6 +94,7 @@ class ItemsController < ApplicationController
         #  format.xml  { render :xml => @item }
         #end
       else
+        flash[:notice] = "invalid input!"
         redirect_to search_path
       end
   end
