@@ -82,9 +82,9 @@ class ItemsController < ApplicationController
   end
   
   def search
-
-      @item = Item.find(params[:item_search][:id])
       
+      @item = Item.find_by_id(params[:item_search][:search_id])
+   
       unless @item.nil?
         
         redirect_to @item
@@ -94,8 +94,7 @@ class ItemsController < ApplicationController
         #  format.xml  { render :xml => @item }
         #end
       else
-        #not found
+        redirect_to search_path
       end
-
   end
 end
