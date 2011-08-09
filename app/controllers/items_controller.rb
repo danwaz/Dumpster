@@ -24,8 +24,12 @@ class ItemsController < ApplicationController
   # GET /items/new
   # GET /items/new.xml
   def new
+    unless user_signed_in?
+      redirect_to home_path
+    end
+    
     @item = Item.new
-
+    
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @item }
@@ -34,12 +38,20 @@ class ItemsController < ApplicationController
 
   # GET /items/1/edit
   def edit
+    unless user_signed_in?
+      redirect_to home_path
+    end
+    
     @item = Item.find(params[:id])
   end
 
   # POST /items
   # POST /items.xml
   def create
+    unless user_signed_in?
+      redirect_to home_path
+    end
+    
     @item = Item.create(params[:item])
 
     respond_to do |format|
@@ -56,6 +68,10 @@ class ItemsController < ApplicationController
   # PUT /items/1
   # PUT /items/1.xml
   def update
+    unless user_signed_in?
+      redirect_to home_path
+    end
+    
     @item = Item.find(params[:id])
 
     respond_to do |format|
@@ -72,6 +88,10 @@ class ItemsController < ApplicationController
   # DELETE /items/1
   # DELETE /items/1.xml
   def destroy
+    unless user_signed_in?
+      redirect_to home_path
+    end
+    
     @item = Item.find(params[:id])
     @item.destroy
 

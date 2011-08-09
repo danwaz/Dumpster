@@ -15,6 +15,9 @@
   <%= @item.desc %>
 </p>
 
-
+<% if can? :update, @items %>
 <%= link_to 'Edit', edit_item_path(@item) %> |
+<% end %>
+<% if can? :update, @items %>
 <%= link_to 'Back', items_path %>
+<% end %>

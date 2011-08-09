@@ -4,6 +4,7 @@
 
 <table>
   <tr>
+  	<th>ID</th>
     <th>Header</th>
     <th>Dimensions</th>
     <th>Description</th>
@@ -14,17 +15,18 @@
 
 <% @items.each do |item| %>
   <tr>
+  	<td><%= item.id %></td>
     <td><%= item.header %></td>
     <td><%= item.dim %></td>
     <td><%= item.desc %></td>
-     <% if can? :read, Item %>
-    <td><%= link_to 'Show', item %></td>
+    <% if can? :read, @items %>
+    	<td><%= link_to 'Show', item %></td>
     <% end %>
-    <% if can? :update, Item %>
-    <td><%= link_to 'Edit', edit_item_path(item) %></td>
+    <% if can? :update, @items %>
+    	<td><%= link_to 'Edit', edit_item_path(item) %></td>
     <% end %>
-    <% if can? :destroy, Item %>
-    <td><%= link_to 'Destroy', item, :confirm => 'Are you sure?', :method => :delete %></td>
+    <% if can? :destroy, @items %>
+    	<td><%= link_to 'Destroy', item, :confirm => 'Are you sure?', :method => :delete %></td>
     <% end %>
   </tr>
 <% end %>
@@ -32,4 +34,6 @@
 
 <br />
 
-<%= link_to 'New Item', new_item_path %>
+<% if can? :create, @items %>
+	<%= link_to 'New Item', new_item_path %>
+<% end %>
