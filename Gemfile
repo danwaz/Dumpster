@@ -2,7 +2,7 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.0.9'
 gem 'paperclip', '~> 2.3'
-gem 'rmagick'
+gem "rmagick", :require => 'RMagick'
 gem 'devise'
 gem 'cancan'
 
