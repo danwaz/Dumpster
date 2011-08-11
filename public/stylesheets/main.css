@@ -7,15 +7,15 @@ body{
 #header{
 	
 	background-color: #000000;
-	height: 40px;
+	height: 100px;
 	width: 100%;
 	
 }
 
 #title {
-	padding-top: 8px;
+	padding-top: 20px;
 	padding-left: 10px;
-	font-size: 26px;
+	font-size: 40px;
 	color: #FFFFFF;
 	position: relative;
 	float: left;
@@ -70,7 +70,7 @@ body{
  * Inherits styles from: Default Layout.
  */
 
-@media only screen and (max-width: 767px) {
+@media screen and (max-width: 479px) {
 	#header{
 	
 	background-color: #000000;
