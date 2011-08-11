@@ -63,3 +63,49 @@ body{
   font-size: 12px;
   list-style: square;
 }
+
+/* Mobile Layout: 320px.
+ * Gutters: 24px.
+ * Outer margins: 34px.
+ * Inherits styles from: Default Layout.
+ */
+
+@media only screen and (max-width: 767px) {
+	#header{
+	
+	background-color: #000000;
+	height: 90px;
+	width: 100%;
+	
+}
+
+#title {
+	padding-top: 20px;
+	padding-left: 10px;
+	font-size: 40px;
+	color: #FFFFFF;
+	position: relative;
+	float: left;
+}
+
+#fullsite{
+	position: relative;
+	float: right;
+	padding-top: 20px;
+	padding-right: 10px;
+	
+}
+	
+}
+
+/* Wide Mobile Layout: 480px.
+ * Gutters: 24px.
+ * Outer margins: 22px.
+ * Inherits styles from: Default Layout, Mobile Layout.
+ */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	
+}
+
+
