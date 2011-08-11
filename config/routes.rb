@@ -6,7 +6,6 @@ Dumpster::Application.routes.draw do
 
   match '/search', :to => 'pages#search'
   match '/home' , :to => 'pages#home'
-  match '/items', :to => 'items#index'
 
   match "/items/search" => "items#search"
   
