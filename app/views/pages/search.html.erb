@@ -2,10 +2,14 @@
 
 <h1>ENTER PIN #</h1>
 
-<% form_for(:item_search, :url => '/items/search') do |f| %>
-<%= f.text_field :search_id %>
-<%= submit_tag "Search "%>
+<div id="container">
 
-<% end %>
+	<% form_for(:item_search, :url => '/items/search') do |f| %>
+	<%= f.text_field :search_id, :class => "textInput" %>
+	<%= submit_tag "Search "%>
 
-<%= link_to "Back", home_path %>
+	<% end %>
+
+	<%= link_to "Back", home_path %>
+
+</div>

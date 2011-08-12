@@ -9,12 +9,13 @@ a{
 	
 }
 
-input{
+.textInput{
 	border:2px solid #666666;
 	font-size: 50px;
 	border-top:none;
 	border-left: none;
-	border-right:none;	
+	border-right:none;
+	width: 300px;	
 }
 
 #header{
