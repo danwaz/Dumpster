@@ -6,9 +6,11 @@
 
 	<% form_for(:item_search, :url => '/items/search') do |f| %>
 	<%= f.text_field :search_id, :class => "textInput" %>
-	<%= submit_tag "Search "%>
+	<%= submit_tag "Enter "%>
 
 	<% end %>
+	
+	<%= image_tag "head.jpg"%>
 
 	<%= link_to "Back", home_path %>
 
