@@ -1,0 +1,13 @@
+%p#notice= notice
+%p
+  %h1= @item.header
+= image_tag @item.image.url(:medium)
+%p
+  %h5= @item.dim
+%p
+  = @item.desc
+- if can? :update, @items
+  = link_to 'Edit', edit_item_path(@item)
+  |
+- if can? :update, @items
+  = link_to 'Back', items_path

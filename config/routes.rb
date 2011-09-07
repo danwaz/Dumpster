@@ -1,4 +1,6 @@
 Dumpster::Application.routes.draw do
+  devise_for :users
+
   get "pages/home"
   get "pages/search"
 
@@ -8,6 +10,15 @@ Dumpster::Application.routes.draw do
   match "/items/search" => "items#search"
   
   resources :items
+  
+  devise_scope :user do
+  get "/logout" => "devise/sessions#destroy"
+  end
+  
+  devise_scope :user do
+  get "/login" => "devise/sessions#new"
+  end
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
