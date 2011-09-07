@@ -5,6 +5,8 @@ gem 'paperclip', '~> 2.3'
 gem "rmagick", :require => 'RMagick'
 gem 'devise'
 gem 'cancan'
+gem 'haml'
+gem 'sass'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
