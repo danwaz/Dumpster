@@ -1,0 +1,18 @@
+= link_to "", search_path, :class => "back-btn"
+
+= image_tag @item.image.url(:medium)
+
+#pagebreak
+
+.container
+	%h1.google-font= @item.header	
+	%h3.google-font= @item.dim
+	%p.description= @item.desc
+		
+	%p#notice= notice	
+	
+	- if can? :update, @items
+		= link_to 'Edit', edit_item_path(@item)
+		|
+	- if can? :update, @items
+		= link_to 'Back', items_path

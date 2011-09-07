@@ -1,0 +1,23 @@
+<%= render 'header' %>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <h1><%= @item.header %></h1>
+</p>
+
+<%= image_tag @item.image.url(:medium) %>
+
+<p>
+  <h5><%= @item.dim %></h5>
+</p>
+
+<p>
+  <%= @item.desc %>
+</p>
+
+<% if can? :update, @items %>
+<%= link_to 'Edit', edit_item_path(@item) %> |
+<% end %>
+<% if can? :update, @items %>
+<%= link_to 'Back', items_path %>
+<% end %>

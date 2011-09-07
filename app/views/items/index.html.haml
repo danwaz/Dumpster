@@ -1,0 +1,25 @@
+%h1 Listing items
+%table
+  %tr
+    %th ID
+    %th Header
+    %th Dimensions
+    %th Description
+    %th
+    %th
+    %th
+  - @items.each do |item|
+    %tr
+      %td= item.id
+      %td= item.header
+      %td= item.dim
+      %td= item.desc
+      - if can? :read, @items
+        %td= link_to 'Show', item
+      - if can? :update, @items
+        %td= link_to 'Edit', edit_item_path(item)
+      - if can? :destroy, @items
+        %td= link_to 'Destroy', item, :confirm => 'Are you sure?', :method => :delete
+%br/
+- if can? :create, @items
+  = link_to 'New Item', new_item_path
