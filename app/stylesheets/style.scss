@@ -121,6 +121,24 @@ h3{
 
 }
 
+.margin{
+	margin: 10px 10px;
+}
+
+table{
+	width: 100%;
+	th{
+		text-align: left;
+	}
+
+	.odd{
+	 	background: #fff;
+	}
+	.even{
+		background: #f1f1f1;
+	}	
+}
+
 #dumpster{
 }
 

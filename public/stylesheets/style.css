@@ -96,6 +96,18 @@ h3 {
   width: 46px;
   height: 32px; }
 
+.margin {
+  margin: 10px 10px; }
+
+table {
+  width: 100%; }
+  table th {
+    text-align: left; }
+  table .odd {
+    background: #fff; }
+  table .even {
+    background: #f1f1f1; }
+
 #imageleft {
   float: left; }
 
