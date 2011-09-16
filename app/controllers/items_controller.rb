@@ -102,7 +102,7 @@ class ItemsController < ApplicationController
   end
   
   def search
-      
+   
       @item = Item.find_by_id(params[:item_search][:search_id])
    
       unless @item.nil?
