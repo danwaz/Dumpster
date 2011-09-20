@@ -1,7 +1,4 @@
 #header
   #title.google-font The Dumpster Project
   #fullsite
-    - if user_signed_in?
-      = link_to 'Logout', logout_path
-    - else
-      = link_to 'Login', login_path
+    %a{:href => "http://www.thedumpsterproject.com"} View full site

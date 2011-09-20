@@ -18,15 +18,24 @@ ol{
 
 }
 
-h1{
+h2{
+	margin-top: 8px;
 	z-index: 1;
 	position: relative;
 	margin-bottom:0;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: -.1;
+	color: #444;
 }
 
-h3{
+h4{
 	margin-top: 0px;
 	font-weight: normal;
+	font-weight: bold;
+	text-transform: uppercase;;
+	letter-spacing: -.1;
+	color: #444;
 }
 
 .description{
@@ -91,6 +100,15 @@ h3{
 	position: relative;
 	float: right;
 	top: 10px;
+	left: 5px;
+	
+}
+
+.pin{
+	z-index: 10;
+	position: relative;
+	padding-top: 30px;
+	padding-bottom:10px;
 	
 }
 
@@ -106,9 +124,15 @@ h3{
 	z-index: 1;
 }
 
-.rel-positioning{
-	position: relative;
-	bottom: 60px;
+.man-doll-bg{
+	background: url("/images/head.jpg") no-repeat 0px -100px;
+	background-size: 100%;
+	width:100%;
+	height:175px;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+
 }
 
 .back-btn{
@@ -119,6 +143,13 @@ h3{
 	width: 46px;
 	height: 32px;
 
+}
+
+.center{
+	margin-left: 45px;
+	padding-top: 20px;
+	padding-bottom: 10px;
+	
 }
 
 .margin{
@@ -148,15 +179,37 @@ table{
 #images{
 }
 
-#imageleft{
-	float: left;
+.home-container{
+	background: url("/images/head_home.jpg") no-repeat;
+	background-size: 100%;
+	width:100%;
+	height: 310px;
+	margin: 0;
+	padding: 0;
+	
+	#logo{
+		position: absolute;
+		left: 20px;
+		top: 55px;
+	}
+	
+	#search{
+		position: absolute;
+		left: 198px;
+		top: 195px;
+	}	
 }
+
 
 #pagebreak{
 	clear:both;
 	background-color: #000000;
-	height: 10px;
-	width: 100%;	
+	height: 5px;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	bottom: 5px;	
 }
 
 #notice {
@@ -211,7 +264,7 @@ table{
 	
 	#title {
 		padding-top: 5px;
-		padding-left: 15px;
+		padding-left: 20px;
 		font-size: 14px;
 		color: #FFFFFF;
 		position: relative;
@@ -221,14 +274,15 @@ table{
 	#fullsite{
 		position: relative;
 		float: right;
-		padding-top: 6px;
-		padding-right: 15px;
+		padding-top: 8px;
+		padding-right: 20px;
 		font-size: 12px;
+		font-weight: bold;
 		
 	}
 	
 	.container{
-		padding: 5px 15px;
+		padding: 5px 15px 0px 20px;
 	}
 	
 	#dumpster{
@@ -244,12 +298,12 @@ table{
 	}
 	
 	#images{
-		padding-top: 12px;
+		
 		
 	}
 	
 	#imageleft{
-		padding-top: 10px;
+		
 		
 		
 	}

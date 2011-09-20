@@ -1,6 +1,6 @@
 .container
-	%h1.google-font Enter Pin #
+	=image_tag "pin.png", :class => "pin" 
 	- form_for(:item_search, :url => '/items/search') do |f|
 		= f.text_field :search_id, :class => "textInput"
 		= submit_tag "", :class => "enter"
-	= image_tag "head.jpg", :class => "rel-positioning"
+.man-doll-bg

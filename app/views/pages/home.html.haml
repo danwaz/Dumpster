@@ -1,9 +1,11 @@
-.container
-	#dumpster.google-font The Dumpster
-	#project.google-font Project
-	#images
-		#imageleft= image_tag "head_home.jpg"
-		= link_to "", search_path, :class => "search-btn"
+.home-container
+	#logo
+		=image_tag "thedumpsterproject.png"
+	#search
+		%a{:href => "/search"}
+			=image_tag "search.png"
+
+
 		
 #pagebreak 
 .container
@@ -11,3 +13,6 @@
 		%li I have archived much of my life through collected objects.
 		%li I am moving to a smaller studio, making it necessary that I get rid of a lot of these objects.
 		%li I will do so by using them as the raw material for one enormous collage, created inside a 30-yard dumpster.
+		%li Oh, also, I have photographed around 500 of these objects and will display them here, accompanied by a brief history of each item.
+	%a{:href => "http://www.frankcollective.com", :class => "center"}
+		=image_tag "frank_logo_half.png"
